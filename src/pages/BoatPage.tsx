@@ -2,16 +2,13 @@ import { Box, Button, Card, Grid, ImageList, ImageListItem, TextField, Typograph
 import { Stack } from '@mui/system';
 import React from 'react';
 import PageWithHeader from '../components/PageWithHeader';
-import useIsMobile from '../hooks/useIsMobile';
-import styles from '../theme/theme';
 import {ReactComponent as CaptainsHat} from "../assets/icons/captains_hat.svg";
 import clsx from 'clsx'
 import LocationIcon from "@mui/icons-material/LocationOn";
 import { useNavigate } from 'react-router-dom';
+import {isMobile} from 'react-device-detect';
 
 const BoatPage = () => {
-    const isMobile = useIsMobile()
-    const classes = styles()
     const navigate = useNavigate();
     return (
         <PageWithHeader>
@@ -36,13 +33,13 @@ const BoatPage = () => {
                                 Offered by Noel Sharpe
                             </Typography>
 
-                            <Box className={classes.boatDetailsInfoRow}>
-                                <LocationIcon className={clsx(classes.boatDetailsInfoIcon, classes.marginRightMd)}/>
+                            <Box >
+                                <LocationIcon />
                                 <Typography variant="body1" >A port somewhere in the Saechelles</Typography>
                             </Box>
 
-                            <Box className={classes.boatDetailsInfoRow}>
-                                <CaptainsHat className={clsx(classes.boatDetailsInfoIcon, classes.marginRightMd)}/>
+                            <Box>
+                                <CaptainsHat/>
                                 <Typography variant="body1" >This requires a skipper to rent</Typography>
                             </Box>
 
@@ -67,7 +64,7 @@ const BoatPage = () => {
                 </Grid>
 
                 <Grid item xs={12} md={4} justifyContent="flex-start">
-                    <Card className={classes.bookingCard} sx={{background: 'lightgrey'}}>
+                    <Card sx={{background: 'lightgrey'}}>
                         <Stack spacing={4}>
 
                             <Typography variant="h2">

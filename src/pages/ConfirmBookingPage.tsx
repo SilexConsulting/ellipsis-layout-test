@@ -5,19 +5,17 @@ import { useNavigate } from 'react-router';
 import BookingSummary from '../components/BookingSummary';
 import PageTitle from '../components/PageTitle';
 import PageWithHeader from '../components/PageWithHeader';
-import styles from '../theme/theme';
 
 const ConfirmBookingPage = () => {
-    const classes = styles()
     const navigate = useNavigate();
 
     return (
         <PageWithHeader>
-            <PageTitle 
+            <PageTitle
                 heading="You're nearly set!"
                 subHeading="You are just a few clicks away from securing your charter!"
             />
-            <Box className={clsx(classes.fullWidthCenter, classes.marginBottomMd)}>
+            <Box >
                 <Stepper activeStep={0}  sx={{fontSize: '14px'}}>
                     {['Your booking', 'Payment', 'Confirmation'].map((label) => (
                     <Step key={label}>
@@ -29,7 +27,7 @@ const ConfirmBookingPage = () => {
 
             <Grid container spacing={4}>
                 <Grid item xs={12} sm={12} md={3} >
-                    <Box className={classes.paddingMdContainer} style={{width: '100%', background: 'lightgrey'}}>
+                    <Box style={{width: '100%', background: 'lightgrey'}}>
                         <BookingSummary />
                     </Box>
                 </Grid>
@@ -69,7 +67,7 @@ const ConfirmBookingPage = () => {
                     <Box style={{width: '100%', background: 'lightgrey'}}></Box>
                 </Grid>
             </Grid>
-            
+
         </PageWithHeader>
     );
 }

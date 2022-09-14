@@ -1,14 +1,13 @@
 import React from 'react';
-import {StyledEngineProvider, ThemeProvider} from "@mui/material";
-import {theme} from './theme/theme';
+import { ThemeProvider } from '@emotion/react'
 import Authenticated from './Authenticated';
 import "./App.css"
+import theme from './theme/theme'
+
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
-      <StyledEngineProvider injectFirst>
-          <Authenticated />
-      </StyledEngineProvider>
+      <Authenticated />
     </ThemeProvider>
   );
 }

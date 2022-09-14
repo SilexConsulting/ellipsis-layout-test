@@ -4,10 +4,8 @@ import React from 'react';
 import { useNavigate } from 'react-router';
 import PageTitle from '../components/PageTitle';
 import PageWithHeader from '../components/PageWithHeader';
-import styles, { theme } from '../theme/theme';
 
 const CheckoutCompletePage = () => {
-    const classes = styles()
     const navigate = useNavigate();
 
   return (
@@ -17,7 +15,7 @@ const CheckoutCompletePage = () => {
             heading="Booking Complete"
             subHeading="An email will be sent to you with your booking information"
         />
-        <Box className={clsx(classes.fullWidthCenter, classes.marginBottomMd)}>
+        <Box >
             <Stepper activeStep={2}  sx={{fontSize: '14px'}}>
                 {['Your booking', 'Payment', 'Confirmation'].map((label) => (
                 <Step key={label}>
@@ -32,16 +30,16 @@ const CheckoutCompletePage = () => {
                     <TableBody >
                         {[
                             [
-                                {name: 'Booking Reference', value: 'abcdefg'}, 
-                                {name: 'Booking Reference', value: 'abcdefg'}, 
+                                {name: 'Booking Reference', value: 'abcdefg'},
+                                {name: 'Booking Reference', value: 'abcdefg'},
                             ],
                             [
-                                {name: 'Booking Reference', value: 'abcdefg'}, 
-                                {name: 'Booking Reference', value: 'abcdefg'}, 
+                                {name: 'Booking Reference', value: 'abcdefg'},
+                                {name: 'Booking Reference', value: 'abcdefg'},
                             ],
                             [
-                                {name: 'Booking Reference', value: 'abcdefg'}, 
-                                {name: 'Booking Reference', value: 'abcdefg'}, 
+                                {name: 'Booking Reference', value: 'abcdefg'},
+                                {name: 'Booking Reference', value: 'abcdefg'},
                             ],
                         ].map((prop: any, key: number) =>
                             <TableRow
@@ -62,7 +60,7 @@ const CheckoutCompletePage = () => {
                     </TableBody>
                 </Table>
             </TableContainer>
-            <Typography align={"center"} marginY={theme.spacing(5)} >Your booking details have been sent to your email</Typography>
+            <Typography align={"center"} >Your booking details have been sent to your email</Typography>
             <Button variant="contained" onClick={() => navigate('/')} data-cy="homepageButton">
                     Continue to home page
             </Button>

@@ -1,17 +1,9 @@
-import { Box, Button, Divider, Grid, IconButton, Stack, Typography } from '@mui/material';
+import { Box, Divider, Stack, Typography } from '@mui/material';
 import React from 'react';
-import useIsMobile from '../hooks/useIsMobile';
-import styles from '../theme/theme';
-import MenuIcon from '@mui/icons-material/Menu'
-interface OwnProps {
-}
-const BookingSummary = (props: OwnProps) => {
-    const classes = styles()
-    const isMobile = useIsMobile()
+
+const BookingSummary = () => {
     return (
-        <Box
-            className={classes.paddingSmContainer}
-        >
+        <Box>
             <Stack spacing={4}>
                 <Stack spacing={2}>
                     <Typography variant="subtitle1">Dates</Typography>

@@ -1,8 +1,8 @@
 import { createTheme } from '@mui/material/styles';
-import { createStyles, makeStyles } from '@mui/styles';
 
-export const theme = createTheme({
+export const theme = {
   palette: {
+    mode: 'light',
     primary: {
       main: '#378CB1',
       dark: '#19486A',
@@ -77,87 +77,11 @@ export const theme = createTheme({
           }
         },
       },
-    },
-    MuiFormHelperText: {
-      styleOverrides: {
-        root: ({ theme }) => ({
-          color: `${theme.palette.error.light} !important`,
-          marginRight: '1rem',
-          marginLeft: '1rem'
-        }),
-      },
-    },
-    MuiButton: {
-        styleOverrides: {
-            root: ({ ownerState, theme }) => ({
-              fontSize: 14,
-              [theme.breakpoints.up('sm')]: {
-                  width: 'fit-content'
-              }
-            })
-        }
     }
-  },
-});
+  }
+}
 
-const styles = makeStyles(() =>
-  createStyles({
-    appBar: {
-      display: 'flex', 
-      boxSizing: 'border-box',
-      padding: theme.spacing(5),
-      height: '75px',
-      width: "100%",
-      justifyContent: "space-between",
-      alignItems: "center"
-    },
-    pageContainer: {
-      width: '100%', 
-      flexGrow: 1, 
-      overflowY: 'auto', 
-      overflowX: 'hidden', 
-      paddingLeft: theme.spacing(2), 
-      paddingRight: theme.spacing(2), 
-      paddingBottom: theme.spacing(2),
-      boxSizing: 'border-box'
-    },
-    boatDetailsInfoRow: {
-      display: 'flex',
-      alignItems: 'center'
-    },
-    boatDetailsInfoIcon: {
-      fontSize: 25,
-      width: '30px',
-    },
-    paddingMdContainer: {
-      padding: theme.spacing(4),
-      boxSizing: 'border-box'
-    },
-    paddingSmContainer: {
-      padding: theme.spacing(2),
-      boxSizing: 'border-box'
-    },
-    marginTopMd: {
-      marginTop: theme.spacing(4)
-    },
-    marginRightMd: {
-      marginRight: theme.spacing(4)
-    },
-    marginBottomMd: {
-      marginBottom: theme.spacing(4)
-    },
-    bookingCard: {
-      boxSizing: 'border-box',
-      padding: theme.spacing(4),
-      width: '100%',
-    },
-    fullWidthCenter: {
-      width: '100%',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-    }
-
-  }), { index: 1 });
+const styles = {
+}
 
 export default styles;
