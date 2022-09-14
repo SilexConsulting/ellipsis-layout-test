@@ -137,6 +137,9 @@ const styles = makeStyles(() =>
       padding: theme.spacing(2),
       boxSizing: 'border-box'
     },
+    marginTopMd: {
+      marginTop: theme.spacing(4)
+    },
     marginRightMd: {
       marginRight: theme.spacing(4)
     },
