@@ -3,7 +3,6 @@ import { Stack } from '@mui/system';
 import React from 'react';
 import PageWithHeader from '../components/PageWithHeader';
 import {ReactComponent as CaptainsHat} from "../assets/icons/captains_hat.svg";
-import { css } from '@emotion/react';
 import LocationIcon from "@mui/icons-material/LocationOn";
 import { useNavigate } from 'react-router-dom';
 import {isMobile} from 'react-device-detect';
@@ -83,8 +82,9 @@ const BoatPage = () => {
                             </Stack>
 
                             <TextField />
+                            <Button variant="contained" onClick={() => navigate('/confirmbooking')} >Book</Button>
 
-                            <Button sx={{width: '100% !important', fontSize: '15px'}} variant="contained" onClick={() => navigate('/confirmbooking')} >Book</Button>
+
                         </Stack>
                     </Card>
                 </Grid>

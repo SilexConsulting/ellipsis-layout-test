@@ -1,6 +1,6 @@
 import { createTheme } from '@mui/material/styles';
 
-export const theme = {
+export const theme = createTheme({
   palette: {
     mode: 'light',
     primary: {
@@ -51,12 +51,14 @@ export const theme = {
     }
   },
   components: {
-    MuiButtonBase: {
+    MuiButton: {
       styleOverrides: {
+        // Name of the slot
         root: {
-          fontSize: 40
-        }
-      }
+          // Some CSS
+          fontSize: '1rem',
+        },
+      },
     },
     MuiFilledInput: {
       styleOverrides: {
@@ -79,7 +81,7 @@ export const theme = {
       },
     }
   }
-}
+});
 
 const styles = {
 }
