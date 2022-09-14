@@ -3,10 +3,16 @@ import { Stack } from '@mui/system';
 import React from 'react';
 import PageWithHeader from '../components/PageWithHeader';
 import {ReactComponent as CaptainsHat} from "../assets/icons/captains_hat.svg";
-import clsx from 'clsx'
+import { css } from '@emotion/react';
 import LocationIcon from "@mui/icons-material/LocationOn";
 import { useNavigate } from 'react-router-dom';
 import {isMobile} from 'react-device-detect';
+import { styled } from '@mui/material/styles';
+
+const CapIcon = styled(CaptainsHat)`
+  font-size: 25px;
+  width: 30px;
+`
 
 const BoatPage = () => {
     const navigate = useNavigate();
@@ -38,8 +44,8 @@ const BoatPage = () => {
                                 <Typography variant="body1" >A port somewhere in the Saechelles</Typography>
                             </Box>
 
-                            <Box>
-                                <CaptainsHat/>
+                            <Box >
+                                <CapIcon  />
                                 <Typography variant="body1" >This requires a skipper to rent</Typography>
                             </Box>
 
